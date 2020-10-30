@@ -24,7 +24,6 @@ affiliations:
   index: 1
 - name: Harvard Pilgrim Health Care Institute
   index: 2
-nocite: @PopMedNet
 ---
 
 # Summary
@@ -58,7 +57,7 @@ PopMedNet&trade; is written in C# on the server side and Typescript on the clien
 
 # Acknowledgements
 
-PopMedNet&trade; was developed and has been extended as part of several contracts awarded by a range of federal, state, and industry stakeholders:
+PopMedNet&trade; [@PopMedNet] was developed and has been extended as part of several contracts awarded by a range of federal, state, and industry stakeholders:
 
 * FDA's Sentinel Initiative
 * PCORI’s National Patient-Centered Clinical Research Network (PCORnet)
