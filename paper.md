@@ -24,7 +24,6 @@ affiliations:
   index: 1
 - name: Harvard Pilgrim Health Care Institute
   index: 2
-nocite: [@PopMedNet]
 ---
 
 # Summary
