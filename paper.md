@@ -24,6 +24,7 @@ affiliations:
   index: 1
 - name: Harvard Pilgrim Health Care Institute
   index: 2
+nocite: [@PopMedNet]
 ---
 
 # Summary
@@ -46,6 +47,15 @@ PopMedNet&trade; has two components. It has a .NET web application component and
 
 PopMedNet&trade; is written in C# on the server side and Typescript on the client side.
 
+# How does PopMedNet&trade; work?
+
+1. Request: Investigators distribute data requests constructed in the point and click web interface
+2. Review: Data Partners receive and review requests in their DataMart Client
+3. Respond: Data partners execute the requests against their local data and upload results 
+4. Download: Investigators access results in the query tool
+
+![PopMedNet Workflow.\label{fig:PopMedNet}](Query_Process_Generic_Numbered.jpg)
+
 # Acknowledgements
 
 PopMedNet&trade; was developed and has been extended as part of several contracts awarded by a range of federal, state, and industry stakeholders:
@@ -61,7 +71,6 @@ serves as the coordinating center for several other initiatives that use PMN and
 * Privacy-protecting distributed analysis of biomedical big data project funded by  the National Institute of Biomedical Imaging and Bioengineering of the National Institutes of Health
 
 # References
-
 
 
 
