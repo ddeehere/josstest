@@ -28,7 +28,7 @@ affiliations:
 
 # Summary
 
-PopMedNet&trade; is an open-source application used to facilitate multi-site health data networks [@Brown:2010]. It uses a distributed network design that enables data holders to retain full control of their data. Investigators send questions to data holders for review and response. PopMedNet eliminates the need for assembling patient records in a centralized repository, thus preserving patient privacy and confidentiality.
+PopMedNet&trade; is an open-source application used to facilitate multi-site health data networks [@Brown:2010]. It uses a distributed network design that enables data partners to retain full control of their data. Investigators send questions to data partners for review and response. PopMedNet eliminates the need for assembling patient records in a centralized repository, thus preserving patient privacy and confidentiality.
 
 Its development was pioneered by the Therapeutics Research and Infectious Disease Epidemiology (TIDE) group of the Department of Population Medicine (DPM) of the Harvard Pilgrim Health Care Institute (HPHCI), an appointing department of the Harvard Medical School.
 
@@ -40,14 +40,34 @@ Distributed health network plays an important role in supporting a number of pop
 
 The goal of PopMedNet&trade; is to facilitate distributed analysis of electronic health data in order to support medical product safety surveillance, disease surveilance, comparative effectiveness, quality, medical resource use, cost-effectiveness, and related studies. It does this by enabling the creation of health data networks that allows the data owners to keep and control uses of their data, while at the same time allows customized access and governance for each network [@Davies:2016; @Malenfant:2015].
 
+The concerns of the network stakeholders are addressed in the design and governance models of the PopMedNet&trade; software platform. 
+
+PopMedNet&trade; features include distributed querying, customizable workflows, and auditing and search capabilities. Its flexible role-based access control system enables the enforcement of varying governance policies.
+
 # Architecture
 
-PopMedNet&trade; has two components. It has a .NET web application component and a Windows desktop application component. The .NET web component uses a modern service oriented architecture (SOA) with a robust API serving a dynamic UI using the MVVM pattern. The Windows desktop component, referred to as the DataMart Client (DMC), uses a plugin architecture to support different types of adapters for querying data. A variety of adapters are available, and able to support file transfer, ad-hoc SQL queries, and dynamically composed queries against local data sources (including SQL Server, Postgres and Oracle).
+PopMedNet&trade; has two components. It has a .NET web application component (Portal) and a Windows desktop application component (DataMart Client). The .NET web component uses a modern service oriented architecture (SOA) with a robust API serving a dynamic UI using the MVVM pattern. The DataMart Client (DMC), uses a plugin architecture to support different types of adapters for querying data. A variety of adapters are available, and able to support file transfer, ad-hoc SQL queries, and dynamically composed queries against local data sources (including SQL Server, Postgres and Oracle).
 
 PopMedNet&trade; is a .NET Framework application, utlizing ASP.NET MVC5 for the implementation of the website application and WinForms for the desktop application. Entity Framework 6 is used for data access, and Typescript for client-side scripting.
 
 # How does PopMedNet&trade; work?
 
+In PopMedNet&trade;, the Portal handles all the governance and acts as a hub for all queries. That ensure that the coordinating center can expect:
+
+* Consistency of information across data partners
+* Quality of data
+* Flexibility to handle different network structures with overlapping data partners
+* Ability to track and report operational activities 
+* Managing multiple projects
+
+The DMC allows data partners to control access to their data before sending it to the Portal. For the data partners, it will:
+
+* Provide protection of PHI
+* Prevent loss of control over proprietary information
+
+The researcher will have no direct access to data but is shielded from the differences among networks’ data models.
+
+A typical PopMedNet&trade; request-response cycle is as follows:
 1. Request: Investigators distribute data requests constructed in the point and click web interface
 2. Review: Data Partners receive and review requests in their DataMart Client
 3. Respond: Data partners execute the requests against their local data and upload results 
