@@ -42,9 +42,9 @@ The goal of PopMedNet&trade; is to facilitate distributed analysis of electronic
 
 # Architecture
 
-PopMedNet&trade; has two components. It has a .NET web application component and a Windows desktop application component. The .NET web component uses a modern service oriented architecture (SOA) with a robust API serving a dynamic UI using the MVVM pattern. The Windows desktop compoennt, called the DataMart Client, makes use of Entity Framework to dynamically converts queries into SQL for execution in order to support multi-database queries.
+PopMedNet&trade; has two components. It has a .NET web application component and a Windows desktop application component. The .NET web component uses a modern service oriented architecture (SOA) with a robust API serving a dynamic UI using the MVVM pattern. The Windows desktop component, referred to as the DataMart Client (DMC), uses a plugin architecture to support different types of adapters for querying data. A variety of adapters are available, and able to support file transfer, ad-hoc SQL queries, and dynamically composed queries against local data sources (including SQL Server, Postgres and Oracle).
 
-PopMedNet&trade; is written in C# on the server side and Typescript on the client side.
+PopMedNet&trade; is a .NET Framework application, utlizing ASP.NET MVC5 for the implementation of the website application and WinForms for the desktop application. Entity Framework 6 is used for data access, and Typescript for client-side scripting.
 
 # How does PopMedNet&trade; work?
 
