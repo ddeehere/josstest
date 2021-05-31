@@ -32,7 +32,7 @@ PopMedNet&trade; is an open-source application used to facilitate multi-site hea
 
 Its development was pioneered by the Therapeutics Research and Infectious Disease Epidemiology (TIDE) group of the Department of Population Medicine (DPM) of the Harvard Pilgrim Health Care Institute (HPHCI), an appointing department of the Harvard Medical School.
 
-![PopMedNet.\label{fig:PopMedNet}](paper-fig1.png)
+![PopMedNet.\label{fig:PopMedNet}](joss_figures/paper-fig1.png)
 
 # Statement of need
 
@@ -73,7 +73,7 @@ A typical PopMedNet&trade; request-response cycle is as follows:
 3. Respond: Data partners execute the requests against their local data and upload results 
 4. Download: Investigators access results in the query tool
 
-![PopMedNet Workflow.\label{fig:PopMedNet}](Query_Process_Generic_Numbered.jpg)
+![PopMedNet Workflow.\label{fig:PopMedNet}](joss_figures/Query_Process_Generic_Numbered.jpg)
 
 # Acknowledgements
 
